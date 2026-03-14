@@ -3,14 +3,13 @@ from tkinter import *
 
 
 #######################定義函數########################
-def hi_fun():
-    print("hi")
+def say_hi():
     display.config(text="hi", fg="red", bg="black")
 
 
-# 定義清除畫面函數,將標籤文字設為空字串，前景色和背景色都設為白色
+# 定義清除畫面函數,將標籤文字設為空字串，前景色和背景色都設為透明
 def clear():
-    display.config(text="", fg="white", bg="white")
+    display.config(text="", fg=window.cget("bg"), bg=window.cget("bg"))
 
 
 #######################建立視窗########################
@@ -20,7 +19,7 @@ window = Tk()
 window.title("my first GUI")
 ############################建立按鈕########################
 # 創建按鈕，並指定按下按鈕後要執行say_hi函數
-btn1 = Button(window, text="show screen", command=hi_fun)
+btn1 = Button(window, text="show screen", command=say_hi)
 # 將按鈕放置在視窗中
 btn1.pack()
 btn2 = Button(window, text="clear screen", command=clear)

@@ -3,7 +3,7 @@ from tkinter import *
 
 
 #######################定義函數########################
-def say_hi():
+def hi_fun():
     for i in range(10):
         print("hi")
 
@@ -15,7 +15,7 @@ window = Tk()
 window.title("my first GUI")
 ############################建立按鈕########################
 # 創建按鈕，並指定按下按鈕後要執行say_hi函數
-btn1 = Button(window, text="say hi", command=say_hi)
+btn1 = Button(window, text="say hi", command=hi_fun)
 # 將按鈕放置在視窗中
 btn1.pack()
 #########################建立標籤########################
