@@ -19,7 +19,7 @@ canvas = Canvas(window, width=600, height=600, bg="#FFFFFF")
 canvas.pack()
 ########################設定視窗圖片#########################
 # 設定視窗圖片
-window.iconbitmap("crocodile2.ico")
+window.iconbitmap("cat.jpg")
 ####################載入圖片#########################
 # 原始方法tkinter內建PhotoImage,只支援PNG,GIF,PGM,PPM格式(不支援JPG,BMP等格式)
 # tkinter內建PhotoImage,只支援PNG,GIF,PGM,PPM格式(不支援JPG,BMP等格式)
@@ -28,7 +28,7 @@ window.iconbitmap("crocodile2.ico")
 # 好處:
 # 1.支援幾乎所有圖片格式(如JPG,BMP等)
 # 2.提供更多圖片處理功能(如調整大小、旋轉等)
-image = Image.open("crocodile2.png")
+image = Image.open("cat.jpg")
 # 將PIL Image物件轉換為Tkinter可用的PhotoImage物件
 img = ImageTk.PhotoImage(image)
 #####################顯示圖片#########################
