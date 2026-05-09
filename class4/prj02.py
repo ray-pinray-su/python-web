@@ -44,8 +44,6 @@ def game_loop():
     if "d" in keys_pressed:  # 如果按下的是d鍵
         canvas.move(reck, 10, 0)  # 將矩形往右移動10像素
     window.after(16, game_loop)  # 每16ms執行一次遊戲迴圈
-
-
 #######################建立視窗########################
 # 創建主視窗
 window = Tk()

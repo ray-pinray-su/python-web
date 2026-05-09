@@ -4,15 +4,12 @@ import sys
 import os
 from PIL import Image, ImageTk
 
+
 os.chdir(sys.path[0])  # 設定工作目錄
-
-
 #######################定義函數########################
 def on_switch_change():
     # 當Checkbutton的狀態改變時,呼叫此函數更新check_label的文字為check_type的值
     check_label.config(text=str(check_type.get()))
-
-
 #########################建立視窗########################
 # 創建主視窗
 window = Tk()  # 創建視窗
@@ -20,9 +17,7 @@ window.title("Checkbutton")  # 設定視窗標題
 ####################### 設定字體########################
 # 設定全域預設字形
 font_size = 20  # 設定字體大小
-window.option_add(
-    "*Font", ("Helvetica", font_size)
-)  # 設定預設字型,這裡設定為Helvetica,字體大小為20
+window.option_add("*Font", ("Helvetica", font_size))  # 設定預設字型,這裡設定為Helvetica,字體大小為20
 #####################設定主題#####################
 style = Style(theme="darkly")  # 設定主題為darkly
 # 設定按鈕與Checkbutton的字型樣式
