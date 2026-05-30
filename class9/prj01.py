@@ -39,3 +39,31 @@ say_hello = gift_wrap(say_hello) #得到包裝後的新版本
 
 #現在的say_hello已經是包裝過的版本了
 say_hello() #呼叫包裝過的版本
+
+
+#=========================
+#第四段:帶參數的裝飾詞->對應@tree.command(name="xxx")
+#=========================
+
+def register_command(name,discription):
+    print(f"[登記]指令/ {name} :{discription}")
+
+    def decorator(func):#中曾:接收函式
+        def wrapper():#內層:包裝後的函式
+            print(f"[執行]指令/{name}")
+            func() #執行原始函式
+        return wrapper
+    return decorator#回傳中層(真正的裝飾詞)
+
+
+#@register_command(name="hello",discription="打招呼")
+#等同於:
+#step1=register_command(name="hello",discription="打招呼") #得到裝飾詞
+#hello_command=step1(say_hello) #得到包裝後的版本
+@register_command(name="hello",discription="打招呼")
+def hello_command():
+    print("Hello,我是hello指令")
+
+
+hello_command() #執行包裝過的版本
+print("---------------------")
